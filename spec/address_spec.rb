@@ -8,4 +8,9 @@ describe(AddressBook) do
       expect(test_contact.name()).to(eq("John"))
     end
   end
+  describe('.all') do
+    it('starts out empty at first') do
+      expect(AddressBook.all()).to(eq([]))
+    end
+  end
 end
