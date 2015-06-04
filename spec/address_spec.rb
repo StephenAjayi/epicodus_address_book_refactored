@@ -13,4 +13,11 @@ describe(AddressBook) do
       expect(AddressBook.all()).to(eq([]))
     end
   end
+  describe('#save') do
+    it('saves an instance of address book to an array') do
+      test_contact = AddressBook.new(:name => "jesse")
+      test_contact.save()
+      expect(AddressBook.all()).to(eq([test_contact]))
+    end
+  end
 end
